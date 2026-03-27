@@ -1,17 +1,4 @@
 # enox
 
-A new Flutter project.
+App sencilla que le permite al usuario tomar una foto en su telefono Android y la guarda en una base de datos (local o en la nube) agregandole la informacion EXIF de la fecha, hora, y ubicacion de cuando se tomó la foto.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
