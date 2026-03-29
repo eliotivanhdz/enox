@@ -1,12 +1,20 @@
+import 'package:enox/services/sqlite_service.dart';
 import 'package:sqflite/sqflite.dart';
-import '../models/photo_exif.dart';
-import 'sqlite_service.dart';
 
-class PhotoExifRepository {
+import '../../models/photo_exif.dart';
+
+abstract class PhotoExifRepository {
+  Future<int> insertPhotoExif(PhotoExif photoExif);
+  Future<List<PhotoExif>> getAllPhotos();
+  Future<int> deletePhotoExif(int id);
+}
+
+class PhotoExifRepositoryImpl implements PhotoExifRepository {
   final SqliteService sqliteService;
 
-  PhotoExifRepository({required this.sqliteService});
+  PhotoExifRepositoryImpl({required this.sqliteService});
 
+  @override
   Future<int> insertPhotoExif(PhotoExif photoExif) async {
     final Database db = await sqliteService.initializeDB();
 
@@ -17,6 +25,7 @@ class PhotoExifRepository {
     );
   }
 
+  @override
   Future<List<PhotoExif>> getAllPhotos() async {
     final Database db = await sqliteService.initializeDB();
 
@@ -28,6 +37,7 @@ class PhotoExifRepository {
     return maps.map(PhotoExif.fromMap).toList();
   }
 
+  @override
   Future<int> deletePhotoExif(int id) async {
     final Database db = await sqliteService.initializeDB();
 

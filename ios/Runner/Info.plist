@@ -30,6 +30,12 @@
 	<string>This app needs camera access to take pictures.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This app needs photo library access to select pictures.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app needs location access to tag photos with GPS coordinates.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app needs location access to keep location updates for photos even in background usage scenarios.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app needs location access to tag photos with GPS coordinates.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
